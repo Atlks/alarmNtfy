@@ -1,6 +1,6 @@
-import os
-from os import mkdir
 
+
+# v241109
 # pip install playsound==1.2.2
 # skuli not take effk
 # pip install
@@ -18,31 +18,20 @@ from os import mkdir
 # 检测匹配度
 threshold = 0.5
 iconMeeting = "C:/db/ggl3.jpg"
+import os
+from os import mkdir
 import time
 from time import sleep
 import datetime
 from PIL import ImageGrab
 import cv2
 import numpy as np
-
-
-
-
 from playsound import playsound
-
-
-
-
 from PIL import Image
 import mss
 
 
-def mkdir2024(pngFilepath):
-    # 使用 os.makedirs 创建目录，exist_ok=True 表示如果目录已存在，则不会抛出异常
-    # 提取文件路径中的目录部分
-    directory = os.path.dirname(pngFilepath)
-    # 创建目录，包括所有缺失的级联目录
-    os.makedirs(directory, exist_ok=True)
+
 
 
 def getSecScr():
@@ -111,12 +100,20 @@ def generate_filenameTimepart():
     # 根据日期时间生成文件名，格式为 'YYYY-MM-DD_HH-MM-SS'
     filename = now.strftime("%Y-%m-%d_%H-%M-%S") + ""
     return filename
+
+
+def mkdir2024(pngFilepath):
+    # 使用 os.makedirs 创建目录，exist_ok=True 表示如果目录已存在，则不会抛出异常
+    # 提取文件路径中的目录部分
+    directory = os.path.dirname(pngFilepath)
+    # 创建目录，包括所有缺失的级联目录
+    os.makedirs(directory, exist_ok=True)
+
+
 while True:
     print("这是一个无限循环，每 5 秒打印一次。")
-   # time.sleep(5)  # 暂停 5 秒
+    # time.sleep(5)  # 暂停 5 秒
 
     foreachx()
     # 等待 5 秒
-    sleep(5)
-
-
+    sleep(30*60);
