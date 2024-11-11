@@ -91,6 +91,7 @@ def foreachx():
 
         # 播放音乐文件
         playsound("C:\\db\\laor.mp3")  # 替换为你的音乐文件路径
+        sleep(30*60);
     else:
         print("图标未找到。")
 
@@ -116,4 +117,4 @@ while True:
 
     foreachx()
     # 等待 5 秒
-    sleep(30*60);
+    sleep(5);
